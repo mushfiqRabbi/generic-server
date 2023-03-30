@@ -6,7 +6,7 @@ const ipcData = JSON.parse(fs.readFileSync("./ipcData.json", "utf8"));
 
 const ipcRouter = express.Router();
 
-ipcRouter.get("/:category", (req, res) => {
+ipcRouter.get("/:category", cors(), (req, res) => {
   const requestedData = ipcData[Number(req.params.category) - 1];
   if (req.query.yearly === "true") {
     res.json({
@@ -19,10 +19,9 @@ ipcRouter.get("/:category", (req, res) => {
 });
 
 const app = express();
-const port = 5000;
-app.use(cors());
+const PORT = process.env.PORT || 5000;
 app.use("/ipc", ipcRouter);
 
 app.listen(port, () => {
-  console.log(`generic server on port ${port}`);
+  console.log(`generic server on port ${PORT}`);
 });
