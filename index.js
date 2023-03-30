@@ -21,6 +21,9 @@ ipcRouter.get("/:category", cors(), (req, res) => {
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.use("/ipc", ipcRouter);
+app.use((req, res) => {
+  res.send("hit");
+});
 
 app.listen(PORT, () => {
   console.log(`generic server on port ${PORT}`);
