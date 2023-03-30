@@ -1,0 +1,22 @@
+[
+  {
+    "views": "10k",
+    "amount": 8
+  },
+  {
+    "views": "50k",
+    "amount": 12
+  },
+  {
+    "views": "100k",
+    "amount": 16
+  },
+  {
+    "views": "500k",
+    "amount": 24
+  },
+  {
+    "views": "1M",
+    "amount": 36
+  }
+]
