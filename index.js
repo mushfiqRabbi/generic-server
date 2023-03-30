@@ -22,7 +22,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 app.use("/ipc", ipcRouter);
 app.use((req, res) => {
-  res.send("hit");
+  res.json(ipcData);
 });
 
 app.listen(PORT, () => {
