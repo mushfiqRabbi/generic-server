@@ -9,7 +9,7 @@ const ipcRouter = express.Router();
 ipcRouter.get(
   "/:category",
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://mushfiqrabbi.github.io",
   }),
   (req, res) => {
     const requestedData = ipcData[Number(req.params.category) - 1];
