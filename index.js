@@ -21,7 +21,7 @@ ipcRouter.get("/:category", cors(), (req, res) => {
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.use("/ipc", ipcRouter);
-app.use((req, res) => {
+app.use("/", (req, res) => {
   res.json(ipcData);
 });
 
